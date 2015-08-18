@@ -27,7 +27,6 @@ public class OAuthActivity extends AppCompatActivity {
     String redirectUrl = "app://localhost";
     String authUrl = "https://data.psc.ac.uk/oauth/v2/auth";
     String tokenUrl = "https://data.psc.ac.uk/oauth/v2/token";
-    String scope = "timetable";
 
     WebView webView;
 
@@ -48,8 +47,7 @@ public class OAuthActivity extends AppCompatActivity {
         String url = authUrl
                 + "?" + "client_id=" + clientId
                 + "&" + "response_type=code"
-                + "&" + "redirect_uri=" + redirectUrl
-                + "&" + "scope=" + scope;
+                + "&" + "redirect_uri=" + redirectUrl;
 
         webView.setVisibility(View.VISIBLE);
         webView.loadUrl(url);
